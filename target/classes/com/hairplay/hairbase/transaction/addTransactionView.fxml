@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.FXCollections.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml">
+<children>
+    <Label text="Add New Transaction" GridPane.columnIndex="0" GridPane.rowIndex="0"></Label>
+    <Label text="Name of Customer: " GridPane.columnIndex="0" GridPane.rowIndex="1"></Label> 
+    <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Type of Haircut: " GridPane.columnIndex="0" GridPane.rowIndex="2"></Label>
+    <ComboBox value="Child" fx:id="haircutTypeComboBox" GridPane.columnIndex="0" GridPane.rowIndex="3">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Child"/>
+                <String fx:value="Child/Bangs"/>
+                <String fx:value="Adult"/>
+                <String fx:value="Senior"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Label text="PWD " GridPane.columnIndex="0" GridPane.rowIndex="4"></Label> <CheckBox fx:id="pwdCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Button fx:id="submitTransactionButton" text="Submit" onAction="#submitTransaction" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+</children>
+</GridPane>
+
+
+    

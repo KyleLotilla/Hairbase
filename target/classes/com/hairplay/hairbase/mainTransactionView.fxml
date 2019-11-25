@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml">
+    <fx:include fx:id="transactionTable" source="transactionTable.fxml"/>
+    <fx:include fx:id="addTransactionButton" source="addTransactionButton.fxml"/>
+</AnchorPane>
