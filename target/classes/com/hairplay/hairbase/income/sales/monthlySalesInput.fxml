@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.FXCollections.*?>
+<?import java.lang.String?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.hairplay.hairbase.income.sales.MonthlySalesInputController">
+    <Label text="Month"/>
+    <ComboBox value = "January" fx:id="monthComboBox">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value= "January"/>
+                <String fx:value= "February"/>
+                <String fx:value= "March"/>
+                <String fx:value= "April"/>
+                <String fx:value= "May"/>
+                <String fx:value= "June"/>
+                <String fx:value= "July"/>
+                <String fx:value= "August"/>
+                <String fx:value= "September"/>
+                <String fx:value= "October"/>
+                <String fx:value= "November"/>
+                <String fx:value= "December"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
+    <Label text="Year: "/>
+    <TextField fx:id="yearTextField"/>
+    <Button text="Submit" onAction="#changeTimeFrame"/>
+</HBox>

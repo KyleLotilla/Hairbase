@@ -5,7 +5,7 @@
  */
 package com.hairplay.hairbase;
 
-import com.hairplay.hairbase.transaction.MainTransactionController;
+import com.hairplay.hairbase.customerListing.CustomerListingViewController;
 import com.hairplay.hairbase.transaction.SQLiteTransactionManager;
 
 import javafx.application.Application;
@@ -17,8 +17,8 @@ import javafx.scene.layout.Pane;
 public class MainApp extends Application{
 
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainTransactionView.fxml"));
-        loader.setController(new MainTransactionController(new SQLiteTransactionManager()));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("mainView.fxml"));
+        loader.setController(new MainAppController(new SQLiteTransactionManager()));
         Pane mainTransactionView = (Pane) loader.load();
 
         primaryStage.setTitle("Hairbase");

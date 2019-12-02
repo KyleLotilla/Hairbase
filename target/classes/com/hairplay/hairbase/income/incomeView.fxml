@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:id="incomeBorderPane">
+<top>
+    <Label Text="Monthly Income"/>
+</top>
+<center>
+    <fx:include fx:id="accountTables" source="accountTables.fxml"/>
+</center>
+<right>
+    <fx:include fx:id="incomeInputs" source="incomeInputs.fxml"/>
+</right>
+<bottom>
+    <fx:include fx:id="incomeReport" source="report/incomeReport.fxml"/>
+</bottom>
+</BorderPane>

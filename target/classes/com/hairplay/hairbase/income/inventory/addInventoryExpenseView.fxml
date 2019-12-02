@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.FXCollections.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml">
+<children>
+    <Label text="Inventory Name: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="inventoryNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Cost per Single Quantity: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="baseCostOfInventoryTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Quantity: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="quantityTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Button onAction="#addInventoryExpense" text="Submit"/>
+</children>
+</GridPane>

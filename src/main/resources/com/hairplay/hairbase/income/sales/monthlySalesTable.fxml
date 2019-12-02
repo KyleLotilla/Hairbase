@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="com.hairplay.hairbase.income.sales.MonthlySalesTableController" xmlns:fx="http://javafx.com/fxml">
+<Label Text="Monthly Sales"/>
+<TableView fx:id="monthlySalesTable">
+    <columns>
+        <TableColumn Text= "" fx:id="monthlySalesPlaceHolderCol">
+        </TableColumn>
+        <TableColumn Text= "" fx:id="monthlySalesAmountCol">
+        </TableColumn>
+    </columns>
+</TableView>
+</VBox>                

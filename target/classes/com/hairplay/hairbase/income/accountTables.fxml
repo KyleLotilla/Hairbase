@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.hairplay.hairbase.income.AccountTablesController">
+<content>
+    <VBox>
+        <fx:include fx:id="monthlySalesTable" source="sales/monthlySalesTable.fxml"/>
+        <fx:include fx:id="salaryExpenseTable" source="salary/salaryExpenseTable.fxml"/>
+        <fx:include fx:id="shareOfCompanyExpenseTable" source="shareOfCompany/shareOfCompanyExpenseTable.fxml"/>
+        <fx:include fx:id="inventoryExpenseTable" source="inventory/inventoryExpenseTable.fxml"/>
+        <fx:include fx:id="additionalExpenseTable" source="additionalExpense/additionalExpenseTable.fxml"/>
+    </VBox>
+</content>
+</ScrollPane>

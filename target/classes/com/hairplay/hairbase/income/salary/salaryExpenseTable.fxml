@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="com.hairplay.hairbase.income.salary.SalaryExpenseTableController" xmlns:fx="http://javafx.com/fxml">
+<Label text="Salary"/>
+<TreeTableView fx:id="salaryExpenseTable">
+    <columns>
+        <TreeTableColumn text="Salary" fx:id="salaryExpenseDescCol"/>
+        <TreeTableColumn text="Amount" fx:id="salaryExpenseAmountCol"/>
+    </columns>
+</TreeTableView>
+</VBox>

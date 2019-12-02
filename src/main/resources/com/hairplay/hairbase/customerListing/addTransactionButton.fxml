@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+
+<Button fx:id="addTransactionButton" fx:controller="com.hairplay.hairbase.customerListing.AddTransactionButtonController" xmlns:fx="http://javafx.com/fxml" text="Add Transaction" onAction="#openAddTransactionView"/>

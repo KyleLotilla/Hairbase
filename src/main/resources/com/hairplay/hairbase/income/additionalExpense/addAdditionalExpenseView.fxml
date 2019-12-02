@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.FXCollections.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml">
+<children>
+    <Label text="Expense Name: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="expenseNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Amount: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="amountTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Button onAction="#addAdditionalExpense" text="Submit"/>
+</children>
+</GridPane>

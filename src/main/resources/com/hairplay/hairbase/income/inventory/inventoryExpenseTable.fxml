@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="com.hairplay.hairbase.income.inventory.InventoryExpenseTableController" xmlns:fx="http://javafx.com/fxml">
+<Label Text="Inventory"/>
+<TableView fx:id="inventoryExpenseTable">
+    <columns>
+        <TableColumn Text= "Inventory" fx:id="inventoryExpenseNameCol">
+        </TableColumn>
+        <TableColumn Text= "Quantity" fx:id="inventoryExpenseQuantityCol">
+        </TableColumn>
+        <TableColumn Text= "Tota Cost" fx:id="inventoryExpenseTotalCostCol">
+        </TableColumn>
+    </columns>
+</TableView>
+</VBox> 

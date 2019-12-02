@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="com.hairplay.hairbase.income.shareOfCompany.ShareOfCompanyExpenseTableController" xmlns:fx="http://javafx.com/fxml">
+<Label Text="Share Of the Company"/>
+<TableView fx:id="shareOfCompanyExpenseTable">
+    <columns>
+        <TableColumn Text= "Expense" fx:id="shareOfCompanyExpenseDescCol">
+        </TableColumn>
+        <TableColumn Text= "Amount" fx:id="shareOfCompanyExpenseAmountCol">
+        </TableColumn>
+    </columns>
+</TableView>
+</VBox> 

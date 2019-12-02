@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.collections.FXCollections.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml">
+<children>
+    <Label text="Employee Name: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="employeeNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Payroll: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="payrollTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Number of Regular Working Days: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="numRegularWorkingDaysTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <Label text="Number of Working Holiday: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField fx:id="numWorkingHolidaysTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button onAction="#addSalaryExpense" text="Submit"/>
+</children>
+</GridPane>

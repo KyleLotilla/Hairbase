@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.hairplay.hairbase.income.IncomeInputsController">
+    <fx:include fx:id="monthlySalesInput" source="sales/monthlySalesInput.fxml"/>
+    <fx:include fx:id="salaryExpenseInput" source="salary/salaryExpenseInput.fxml"/>
+    <fx:include fx:id="inventoryExpenseInput" source="inventory/inventoryExpenseInput.fxml"/>
+    <fx:include fx:id="additionalExpenseInput" source="additionalExpense/additionalExpenseInput.fxml"/>
+    <fx:include fx:id="deleteExpenseInput" source="expense/deleteExpenseInput.fxml"/>
+    <fx:include fx:id="computeMonthlyIncomeInput" source="computeMonthlyIncomeInput.fxml"/>
+</VBox>
