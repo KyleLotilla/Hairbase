@@ -9,6 +9,7 @@ import java.time.LocalDate;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
@@ -35,6 +36,7 @@ public class AddTransactionViewController {
         String haircutType = haircutTypeComboBox.getValue();
         boolean isPWD = pwdCheckBox.isSelected();
         BigDecimal amountPaid = null;
+        Alert alert = new Alert(Alert.AlertType.NONE);
 
         if (haircutType.contentEquals("Child")) {
             if (isPWD)
@@ -60,12 +62,19 @@ public class AddTransactionViewController {
 
         if (isPWD && !haircutType.contentEquals("Senior"))
             haircutType = haircutType.concat("/PWD");
-
-        Transaction generatedTransaction = new Transaction(LocalDate.now(), name, haircutType, amountPaid);
-        transactionManager.addTransaction(generatedTransaction);
-        transactionList.add(generatedTransaction);
         
-        Stage window = (Stage) submitTransactionButton.getScene().getWindow();
-        window.close();
+        if(name.isBlank()){
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Customer name is blank");
+            alert.setContentText("Please fill out customer name");
+            alert.showAndWait();
+        } else {
+            Transaction generatedTransaction = new Transaction(LocalDate.now(), name, haircutType, amountPaid);
+            transactionManager.addTransaction(generatedTransaction);
+            transactionList.add(generatedTransaction);
+            Stage window = (Stage) submitTransactionButton.getScene().getWindow();
+            window.close();
+        }
     }
 }

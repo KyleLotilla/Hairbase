@@ -33,7 +33,7 @@ public class AddTransactionButtonController {
         Stage addTransactionStage = new Stage();
         addTransactionStage.initModality(Modality.APPLICATION_MODAL);
         addTransactionStage.setTitle("Add New Transaction");
-        addTransactionStage.setScene(new Scene(addTransactionView, 800, 500));
+        addTransactionStage.setScene(new Scene(addTransactionView));
         addTransactionStage.show();
     }
 

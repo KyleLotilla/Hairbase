@@ -3,8 +3,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane fx:controller="com.hairplay.hairbase.customerListing.TransactionTableController" xmlns:fx="http://javafx.com/fxml">
+<VBox fx:controller="com.hairplay.hairbase.customerListing.TransactionTableController" xmlns:fx="http://javafx.com/fxml">
 <children>
+    <Label fx:id="totalTransactionReturned" text="0 Transaction Returned"/>
     <TableView fx:id="transactionTable">
     <columns>
         <TableColumn text="Date" fx:id="transactionDateCol"/>
@@ -14,5 +15,5 @@
     </columns>
     </TableView>
 </children>
-</AnchorPane>
+</VBox>
     

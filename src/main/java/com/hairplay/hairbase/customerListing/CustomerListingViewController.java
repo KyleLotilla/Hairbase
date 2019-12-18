@@ -14,6 +14,10 @@ public class CustomerListingViewController {
     private TransactionTableController transactionTableController;
     @FXML
     private AddTransactionButtonController addTransactionButtonController;
+    @FXML
+    private FilterMonthTransactionButtonController filterMonthTransactionButtonController;
+    @FXML
+    private FilterDateTransactionButtonController filterDateTransactionButtonController;
     private DBTransactionManager transactionManager;
     private ObservableList<Transaction> transactionList;
 
@@ -25,6 +29,10 @@ public class CustomerListingViewController {
         this.transactionList = FXCollections.observableArrayList(this.transactionManager.viewTransactions());
         transactionTableController.setTransactionList(this.transactionList);
         addTransactionButtonController.setTransactionManager(this.transactionManager);
-        addTransactionButtonController.setTransactionList(this.transactionList);   
+        addTransactionButtonController.setTransactionList(this.transactionList);
+        filterMonthTransactionButtonController.setTableController(transactionTableController);
+        filterMonthTransactionButtonController.setTransactionManager(transactionManager);
+        filterDateTransactionButtonController.setTableController(transactionTableController);
+        filterDateTransactionButtonController.setTransactionManager(transactionManager);
     }
 }

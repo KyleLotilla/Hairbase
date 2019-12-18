@@ -39,6 +39,8 @@ public class MonthlyIncome {
     public void setTimeFrame(int month, int year) {
         LocalDate newTimeFrame = LocalDate.of(year, month, 1);
         BigDecimal newMonthlySales = transactionManager.getMonthlySales(month, year);
+        if (newMonthlySales == null)
+            newMonthlySales = new BigDecimal(0);
         timeFrameListeners.firePropertyChange("incomeTimeFrame", this.incomeTimeFrame, newTimeFrame);
         monthlySalesListeners.firePropertyChange("monthlySales", this.monthlySales, newMonthlySales);
         this.incomeTimeFrame = newTimeFrame;
@@ -78,5 +80,13 @@ public class MonthlyIncome {
 
     public void addMonthlyIncomeListener(PropertyChangeListener listener) {
         monthlyIncomeListeners.addPropertyChangeListener(listener);
+    }
+
+    public LocalDate getTimeFrame() {
+        return this.incomeTimeFrame;
+    }
+
+    public BigDecimal getMonthlySales() {
+        return this.monthlySales;
     }
 }

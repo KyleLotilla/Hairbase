@@ -22,7 +22,7 @@ public class AdditionalExpenseInputController {
         Stage addAdditionalExpenseStage = new Stage();
         addAdditionalExpenseStage.initModality(Modality.APPLICATION_MODAL);
         addAdditionalExpenseStage.setTitle("Add New Additional Expense");
-        addAdditionalExpenseStage.setScene(new Scene(addAdditionalExpenseView, 800, 500));
+        addAdditionalExpenseStage.setScene(new Scene(addAdditionalExpenseView));
         addAdditionalExpenseStage.show();
     }
 

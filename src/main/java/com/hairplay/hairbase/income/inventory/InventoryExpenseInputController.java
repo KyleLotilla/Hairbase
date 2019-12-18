@@ -23,7 +23,7 @@ public class InventoryExpenseInputController {
         Stage addInventoryExpenseStage = new Stage();
         addInventoryExpenseStage.initModality(Modality.APPLICATION_MODAL);
         addInventoryExpenseStage.setTitle("Add New Inventory");
-        addInventoryExpenseStage.setScene(new Scene(addInventoryExpenseView, 800, 500));
+        addInventoryExpenseStage.setScene(new Scene(addInventoryExpenseView));
         addInventoryExpenseStage.show();
     }
 

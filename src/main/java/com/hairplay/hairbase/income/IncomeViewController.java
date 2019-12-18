@@ -55,6 +55,7 @@ public class IncomeViewController {
         accountTablesController.setAdditionalExpense(additionalExpenses);
         incomeInputsController.setMonthlyIncome(monthlyIncome);
         incomeInputsController.setSalaryExpenses(salaryExpenses);
+        incomeInputsController.setShareOfCompanyExpenses(shareOfCompanyExpenses);
         incomeInputsController.setInventoryExpenses(inventoryExpenses);
         incomeInputsController.setAdditionalExpense(additionalExpenses);
         monthlyIncome.addMonthlyIncomeListener(incomeReportController);

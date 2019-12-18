@@ -64,12 +64,77 @@ public class SQLiteTransactionManager implements DBTransactionManager{
 
     @Override
     public List<Transaction> viewTransactions(int month, int year) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
+        PreparedStatement st;
+        String query;
+        ResultSet rs;
+        ArrayList<Transaction> transactionList = new ArrayList<>();
+        try {
+            
+            query = "SELECT * FROM `Transactions` WHERE strftime('%m', Date) = '" + months[month - 1] + "' " + "AND strftime('%Y', Date) = '" + year + "'";
+            st = conn.prepareStatement(query);
+            
+            rs = st.executeQuery();
+                
+            while(rs.next()){
+                //convert string date to LocalDate
+                String localDate = rs.getString(2);
+                Instant instant = Instant.parse(localDate);
+                LocalDateTime dateTime = LocalDateTime.ofInstant(instant, ZoneId.of(ZoneOffset.UTC.getId()));
+                LocalDate date = dateTime.toLocalDate();
+                //name
+                String name = rs.getString(3);
+                //haircut type
+                String haircut = rs.getString(4);
+                //amount paid
+                BigDecimal amount = rs.getBigDecimal(5);
+                    
+                Transaction tr = new Transaction(date, name, haircut, amount);
+                //add the information to an array list
+                transactionList.add(tr);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SQLiteTransactionManager.class.getName()).log(Level.SEVERE, null, ex);
+        }            
+        return transactionList;
     }
 
     @Override
     public List<Transaction> viewTransaction(int month, int day, int year) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String[] months = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
+        String[] days = {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"};
+        PreparedStatement st;
+        String query;
+        ResultSet rs;
+        ArrayList<Transaction> transactionList = new ArrayList<>();
+        try {
+            
+            query = "SELECT * FROM `Transactions` WHERE strftime('%m', Date) = '" + months[month - 1] + "' " + "AND strftime('%Y', Date) = '" + year + "' " + "AND strftime('%d', Date) = '" + days[day - 1] + "'";
+            st = conn.prepareStatement(query);
+            
+            rs = st.executeQuery();
+                
+            while(rs.next()){
+                //convert string date to LocalDate
+                String localDate = rs.getString(2);
+                Instant instant = Instant.parse(localDate);
+                LocalDateTime dateTime = LocalDateTime.ofInstant(instant, ZoneId.of(ZoneOffset.UTC.getId()));
+                LocalDate date = dateTime.toLocalDate();
+                //name
+                String name = rs.getString(3);
+                //haircut type
+                String haircut = rs.getString(4);
+                //amount paid
+                BigDecimal amount = rs.getBigDecimal(5);
+                    
+                Transaction tr = new Transaction(date, name, haircut, amount);
+                //add the information to an array list
+                transactionList.add(tr);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(SQLiteTransactionManager.class.getName()).log(Level.SEVERE, null, ex);
+        }            
+        return transactionList;
     }
 
     public void addTransaction(Transaction t) {

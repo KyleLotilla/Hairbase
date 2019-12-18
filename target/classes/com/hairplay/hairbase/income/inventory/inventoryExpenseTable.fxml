@@ -10,7 +10,7 @@
         </TableColumn>
         <TableColumn Text= "Quantity" fx:id="inventoryExpenseQuantityCol">
         </TableColumn>
-        <TableColumn Text= "Tota Cost" fx:id="inventoryExpenseTotalCostCol">
+        <TableColumn Text= "Total Cost" fx:id="inventoryExpenseTotalCostCol">
         </TableColumn>
     </columns>
 </TableView>

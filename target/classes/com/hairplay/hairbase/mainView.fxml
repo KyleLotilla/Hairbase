@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:id="appBorderPane">
 <left>
     <VBox>
-        <Label Text="Logo"/>
+        <ImageView fitHeight="150.0" fitWidth="182.0" pickOnBounds ="true" preserveRatio="true">
+            <image>
+                <Image url="@images/HAIRPLAY.png"/>
+            </image>
+        </ImageView>
         <Button Text="Customer Listing" onAction="#showCustomerListing"/>
         <Button Text="Income" onAction="#showIncome"/>
     </VBox>

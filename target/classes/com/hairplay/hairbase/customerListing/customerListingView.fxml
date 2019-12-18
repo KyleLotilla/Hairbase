@@ -7,5 +7,8 @@
 <children>
     <fx:include fx:id="transactionTable" source="transactionTable.fxml"/>
     <fx:include fx:id="addTransactionButton" source="addTransactionButton.fxml"/>
+    <fx:include fx:id="exportTransactionButton" source="exportTransactionButton.fxml"/>
+    <fx:include fx:id="filterDateTransactionButton" source="filterDateTransactionButton.fxml"/>
+    <fx:include fx:id="filterMonthTransactionButton" source="filterMonthTransactionButton.fxml"/>
 </children>
 </FlowPane>

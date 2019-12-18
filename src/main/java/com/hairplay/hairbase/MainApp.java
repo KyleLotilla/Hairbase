@@ -12,7 +12,9 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
+import javafx.stage.StageStyle;
 
 public class MainApp extends Application{
 
@@ -20,9 +22,18 @@ public class MainApp extends Application{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("mainView.fxml"));
         loader.setController(new MainAppController(new SQLiteTransactionManager()));
         Pane mainTransactionView = (Pane) loader.load();
-
+        
+        Scene mainScene = new Scene(mainTransactionView, 800, 500);
+        mainScene.getStylesheets().clear();
+        mainScene.getStylesheets().add(getClass().getResource("styleSheet/mainStyle.css").toExternalForm());
+        primaryStage.initStyle(StageStyle.DECORATED);
         primaryStage.setTitle("Hairbase");
-        primaryStage.setScene(new Scene(mainTransactionView, 800, 500));
+        primaryStage.setScene(mainScene);
+        //primaryStage.setFullScreen(true);
+        Image icon = new Image(getClass().getResourceAsStream("images/HAIRPLAY.png"));
+        primaryStage.getIcons().add(icon);
+        
+        //primaryStage.setMaximized(true);
         primaryStage.show();
     }
     

@@ -13,6 +13,8 @@ C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\inc
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\transaction\SQLiteTransactionManager.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\IncomeInputsController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\transaction\Transaction.java
+C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\report\SummarizedIncomeReportInputController.java
+C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\customerListing\ExportTransactionButtonController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\MonthlyIncome.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\customerListing\CustomerListingViewController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\additionalExpense\AddAdditionalExpenseViewController.java
@@ -22,13 +24,16 @@ C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\inc
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\additionalExpense\AdditionalExpenseTableController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\database\SQLiteConnect.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\MainApp.java
+C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\customerListing\FilterMonthTransactionButtonController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\inventory\InventoryExpenseInputController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\MainAppController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\AccountTablesController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\inventory\AddInventoryExpenseViewController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\expense\InventoryExpense.java
+C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\customerListing\FilterDateTransactionButtonController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\expense\ShareOfCompanyExpense.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\transaction\DBTransactionManager.java
+C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\report\DetailedIncomeReportInputController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\expense\ExpenseSelectionModel.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\report\IncomeReportController.java
 C:\Users\Kyle\Documents\SOFENGG\hairbase\src\main\java\com\hairplay\hairbase\income\salary\SalaryExpenseInputController.java

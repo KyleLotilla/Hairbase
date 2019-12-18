@@ -10,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextFormatter.Change;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import javafx.util.converter.BigDecimalStringConverter;
 import javafx.util.converter.IntegerStringConverter;
@@ -52,9 +54,30 @@ public class AddInventoryExpenseViewController {
     }
 
     public void addInventoryExpense() {
-        inventoryExpenses.add(new InventoryExpense(inventoryNameTextField.getText(), (BigDecimal)baseCostOfInventoryTextField.getTextFormatter().getValue(), (Integer)quantityTextField.getTextFormatter().getValue()));
-
-        Stage window = (Stage) inventoryNameTextField.getScene().getWindow();
-        window.close();
+        Alert alert = new Alert(AlertType.NONE);
+        if(inventoryNameTextField.getText().isBlank()){
+            alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Inventory name is blank");
+            alert.setContentText("Please fill out inventory name");
+            alert.showAndWait();
+        } else if(baseCostOfInventoryTextField.getText().isBlank()) {
+            alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Cost per single quantity is blank");
+            alert.setContentText("Please fill out cost per single quantity");
+            alert.showAndWait();            
+        } else if(quantityTextField.getText().isBlank()) {
+            alert = new Alert(AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Quantity is blank");
+            alert.setContentText("Please fill out quantity");
+            alert.showAndWait();
+        } else {
+            inventoryExpenses.add(new InventoryExpense(inventoryNameTextField.getText(), (BigDecimal)baseCostOfInventoryTextField.getTextFormatter().getValue(), (Integer)quantityTextField.getTextFormatter().getValue()));
+           
+            Stage window = (Stage) inventoryNameTextField.getScene().getWindow();
+            window.close();
+        }
     }
 }

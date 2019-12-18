@@ -22,7 +22,7 @@ public class SalaryExpenseInputController {
         Stage addSalaryExpenseStage = new Stage();
         addSalaryExpenseStage.initModality(Modality.APPLICATION_MODAL);
         addSalaryExpenseStage.setTitle("Add New Salary");
-        addSalaryExpenseStage.setScene(new Scene(addSalaryExpenseView, 800, 500));
+        addSalaryExpenseStage.setScene(new Scene(addSalaryExpenseView));
         addSalaryExpenseStage.show();
     }
 

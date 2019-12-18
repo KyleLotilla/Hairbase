@@ -7,6 +7,7 @@ import java.util.function.UnaryOperator;
 import com.hairplay.hairbase.income.expense.AdditionalExpense;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextFormatter.Change;
@@ -39,9 +40,24 @@ public class AddAdditionalExpenseViewController {
     }
 
     public void addAdditionalExpense() {
-        additionalExpenses.add(new AdditionalExpense(expenseNameTextField.getText(), (BigDecimal)amountTextField.getTextFormatter().getValue()));
+        Alert alert = new Alert(Alert.AlertType.NONE);
+        if(expenseNameTextField.getText().isBlank()){
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Additional expense name is blank");
+            alert.setContentText("Please fill out additional expense name");
+            alert.showAndWait();
+        } else if(amountTextField.getText().isBlank()){
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning");
+            alert.setHeaderText("Amount is blank");
+            alert.setContentText("Please fill out amount");
+            alert.showAndWait();            
+        } else {
+            additionalExpenses.add(new AdditionalExpense(expenseNameTextField.getText(), (BigDecimal)amountTextField.getTextFormatter().getValue()));
 
-        Stage window = (Stage) expenseNameTextField.getScene().getWindow();
-        window.close();
+            Stage window = (Stage) expenseNameTextField.getScene().getWindow();
+            window.close();
+        }
     }
 }

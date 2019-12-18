@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.collections.FXCollections.*?>
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
 
-<GridPane xmlns:fx="http://javafx.com/fxml">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1">
 <children>
-    <Label text="Employee Name: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <TextField fx:id="employeeNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-    <Label text="Payroll: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <TextField fx:id="payrollTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    <Label text="Number of Regular Working Days: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField fx:id="numRegularWorkingDaysTextField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    <Label text="Number of Working Holiday: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <TextField fx:id="numWorkingHolidaysTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-    <Button onAction="#addSalaryExpense" text="Submit"/>
+    <Label text="Employee Name: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="employeeNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Label text="Payroll: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="payrollTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="Number of Regular Working Days: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="numRegularWorkingDaysTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Number of Working Holiday: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="numWorkingHolidaysTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Button onAction="#addSalaryExpense" text="Submit" GridPane.rowIndex="4" />
 </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
 </GridPane>

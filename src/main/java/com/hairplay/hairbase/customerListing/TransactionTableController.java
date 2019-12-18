@@ -13,8 +13,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.util.Callback;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Region;
 
 public class TransactionTableController {
+    @FXML
+    private Label totalTransactionReturned;
     @FXML
     private TableView<Transaction> transactionTable;
     @FXML
@@ -53,9 +57,13 @@ public class TransactionTableController {
                 return new ReadOnlyStringWrapper(amountPaid.toString());
             }
         });
+        
+        totalTransactionReturned.setMinWidth(Region.USE_PREF_SIZE);
+        totalTransactionReturned.setMaxWidth(Region.USE_PREF_SIZE);
     }
 
     public void setTransactionList(ObservableList<Transaction> transactionList) {
         transactionTable.setItems(transactionList);
+        totalTransactionReturned.setText(transactionList.size() + " Transactions Returned");
     }
 }
